@@ -82,3 +82,14 @@ a {
 .t-min {
   font-weight: lighter;
 }
+
+.open-source {
+  color: #007bff;
+  text-align: center;
+  text-decoration: none;
+}
+small {
+  display: block;
+  font-family: monospace;
+  text-align: center;
+}
