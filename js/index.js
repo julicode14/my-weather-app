@@ -60,8 +60,8 @@ fahrenheit.addEventListener("click", convertFaharenheit);
 //Homework week5
 
 function showCurrentTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let myCity = response.data.name;
+  let temperature = Math.round(response.data.temperature.current);
+  let myCity = response.data.city;
   let ttoday = document.querySelector("#temperature-today");
   let actualCity = document.querySelector("#actual-city");
   ttoday.innerHTML = temperature;
@@ -71,18 +71,18 @@ function showCurrentTemperature(response) {
 function searchYourCity(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
-  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-  let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  let apiKey = "f6a6co8tc65642fe1b2e3fafd7d5d0f6";
+  let unit = "metric";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(showCurrentTemperature);
 }
 
 function showPosition(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let latitude = position.coordinates.latitude;
+  let longitude = position.coordinates.longitude;
+  let apiKey = "f6a6co8tc65642fe1b2e3fafd7d5d0f6";
   let unit = "metric";
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`;
+  let url = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=${unit}`;
   axios.get(url).then(showCurrentTemperature);
 }
 
