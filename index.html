@@ -42,29 +42,29 @@
         </form>
         <h1 class="city" id="actual-city">Munich</h1>
         <ul class="weather-today">
-          <li id="real-time"></li>
-          <li>Mostly cloudy</li>
+          <li>Last updated: <span id="real-time"></span></li>
+          <li id="description"></li>
         </ul>
         <div class="row">
           <div class="col-7">
-            <span class="t-today" id="temperature-today">☁️-1</span
-            ><span class="units">
-              <a href="#" id="cels">°C </a>|<a href="#" id="fahr"> °F</a></span
-            >
+            <div class="d-flex current-temp">
+              <img src="" alt="Clear" id="icon" />
+              <span class="t-today" id="temperature-today"></span>
+              <span class="units">
+                <a href="#" id="cels" class="active">°C </a>|<a
+                  href="#"
+                  id="fahr"
+                >
+                  °F</a
+                ></span
+              >
+            </div>
           </div>
           <div class="col-5">
             <ul class="parameters">
-              <li>Precipitation: 2%</li>
-              <li>Wind: 5 km/h</li>
-              <li>Humidity: 80%</li>
+              <li>Wind: <span id="wind"></span>km/h</li>
+              <li>Humidity: <span id="humidity"></span>%</li>
             </ul>
-            <button type="button" class="btn btn-primary btn-sm">
-              Precipitation
-            </button>
-            <button type="button" class="btn btn-primary btn-sm">Wind</button>
-            <button type="button" class="btn btn-primary btn-sm">
-              Humidity
-            </button>
           </div>
         </div>
         <div class="cards-alignment">
