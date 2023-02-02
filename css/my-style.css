@@ -1,3 +1,6 @@
+body {
+  background-color: rgb(217, 215, 227);
+}
 form {
   display: block;
   justify-content: center;
@@ -12,6 +15,14 @@ li {
 a {
   text-decoration: none;
 }
+small {
+  display: block;
+  font-family: monospace;
+  text-align: center;
+}
+li::first-letter {
+  text-transform: capitalize;
+}
 .weather-app {
   background: linear-gradient(
     180.3deg,
@@ -20,8 +31,8 @@ a {
   );
   border-radius: 30px;
   margin: 20px auto;
-  max-width: 70%;
-  padding: 30px;
+  max-width: 600px;
+  padding: 40px;
 }
 .city {
   margin: 0px;
@@ -35,7 +46,28 @@ a {
   font-size: 60px;
   font-weight: 400;
 }
-
+#search-button {
+  background: #3d4758;
+  height: 40px;
+  letter-spacing: 1.5px;
+  font-size: 11px;
+  text-transform: uppercase;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 45px;
+  transition: all 0.3s ease 0s;
+}
+#current-location {
+  background: #6882a0;
+  border: none;
+  border-radius: 45px;
+  height: 40px;
+  letter-spacing: 1.5px;
+  font-size: 11px;
+  text-transform: uppercase;
+  align-content: space-around;
+  transition: all 0.3s ease 0s;
+}
 .units {
   position: relative;
   top: 15px;
@@ -45,56 +77,23 @@ a {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-.cards-alignment {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-.card {
-  width: 120px;
-}
-.card-body {
-  font-size: 12px;
-}
-.card-title {
-  font-weight: bold;
-  margin: 0px;
-  text-align: center;
-}
-.date {
-  line-height: 1.5;
-  margin: 0px;
-  text-align: center;
-}
-.emoji-weather {
-  font-size: 40px;
-  margin: 0px;
-  text-align: center;
-}
-.card-text {
-  margin: 0px;
-  text-align: center;
-}
-.t-max {
-  margin: 0px;
-  text-align: center;
-}
-.t-min {
-  font-weight: lighter;
-}
-
 .open-source {
   color: #007bff;
   text-align: center;
   text-decoration: none;
 }
-li::first-letter {
-  text-transform: capitalize;
-}
-
-small {
-  display: block;
-  font-family: monospace;
+.weather-forecast {
+  margin-top: 20px;
   text-align: center;
+  color: #000;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+.weather-forecast-temperatures {
+  font-size: 13px;
 }
