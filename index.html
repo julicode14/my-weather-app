@@ -28,7 +28,13 @@
             />
           </div>
           <div class="col-2">
-            <button type="submit" class="btn btn-primary mb-3">Search</button>
+            <button
+              type="submit"
+              class="btn btn-primary mb-3"
+              id="search-button"
+            >
+              Search
+            </button>
           </div>
           <div class="col-3">
             <button
@@ -36,7 +42,7 @@
               class="btn btn-success mb-3"
               id="current-location"
             >
-              Current location
+              Current
             </button>
           </div>
         </form>
@@ -67,65 +73,7 @@
             </ul>
           </div>
         </div>
-        <div class="cards-alignment">
-          <div class="row">
-            <div class="col-auto">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title">Tomorrow</p>
-                  <p class="date">12/20</p>
-                  <p class="emoji-weather">☁️</p>
-                  <p class="card-text">Mostly cloudy</p>
-                  <p class="t-max">6°| <span class="t-min">1°</span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-auto">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title">Wed</p>
-                  <p class="date">12/21</p>
-                  <p class="emoji-weather">🌧️</p>
-                  <p class="card-text">Showers</p>
-                  <p class="t-max">7°| <span class="t-min">2°</span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-auto">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title">Thu</p>
-                  <p class="date">12/22</p>
-                  <p class="emoji-weather">🌧️</p>
-                  <p class="card-text">Showers</p>
-                  <p class="t-max">8°| <span class="t-min">4°</span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-auto">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title">Fri</p>
-                  <p class="date">12/23</p>
-                  <p class="emoji-weather">🌥️</p>
-                  <p class="card-text">Cloudy</p>
-                  <p class="t-max">11°| <span class="t-min">4°</span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-auto">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title">Sat</p>
-                  <p class="date">12/24</p>
-                  <p class="emoji-weather">🌧️</p>
-                  <p class="card-text">Showers</p>
-                  <p class="t-max">12°| <span class="t-min">5°</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="weather-forecast" id="forecast"></div>
       </div>
       <small>
         <a
@@ -133,7 +81,8 @@
           target="_blank"
           class="open-source"
           >Open-source code</a
-        >, by Giulia Villa
+        >
+        by Giulia Villa
       </small>
     </div>
     <script src="js/index.js"></script>
